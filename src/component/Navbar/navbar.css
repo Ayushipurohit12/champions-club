@@ -1,9 +1,10 @@
 .navbar {
   position: relative;
   z-index: 10;
-  margin: 20px auto;
   width: 90%;
-  padding: 14px 30px;
+  margin-top: 20px;
+  padding: 10px 30px;
+  border: 1px solid #FFFFFF4D;
   border-radius: 40px;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(12px);
@@ -19,6 +20,14 @@
   margin: 0 14px;
   font-size: 14px;
   cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 .nav-actions button {
   margin-left: 12px;
@@ -29,7 +38,7 @@
 }
 .explore {
   background: transparent;
-  border: 1px solid white;
+  border: 1px solid #FFFFFF !important;
   color: white;
 }
 .login {
@@ -38,4 +47,59 @@
   font-weight: 600;
 }
 
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
 
+.hamburger span {
+  width: 24px;
+  height: 2px;
+  background-color: white;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    width: 95%;
+    padding: 10px 15px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: rgba(20, 20, 20, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 20px 0;
+    border-radius: 20px;
+    margin-top: 10px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    margin: 15px 0;
+    display: block;
+    font-size: 16px;
+  }
+
+  .explore {
+    display: none;
+  }
+}

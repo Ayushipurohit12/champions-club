@@ -9,7 +9,7 @@ function Home() {
       <div className="main-content" />
       <Navbar />
       <div className="content">
-        <p className="welcome">WELCOME TO INDIA’S</p>
+        <p className="welcome">WELCOME <br /> TO  <br />INDIA’S</p>
         <h1 className="title">
           MOST <br />
           EXCLUSIVE <br />

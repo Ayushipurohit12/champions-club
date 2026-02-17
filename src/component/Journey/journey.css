@@ -1,0 +1,118 @@
+.journey-wrapper {
+  background-color: #e1d3ce;
+  padding: 120px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.journey-card {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  background: #f2f2f2;
+  border-radius: 12px;
+  padding: 40px 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+.journey-title {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #f2f2f2;
+  padding: 10px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  color: #b68b3c;
+  font-size: 14px;
+  letter-spacing: 1px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.journey-fields {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.field {
+  flex: 1;
+  min-width: 150px;
+}
+
+.field label {
+  font-size: 13px;
+  color: #b68b3c;
+  display: block;
+}
+ 
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.field p {
+  font-size: 18px;
+  font-family: "GT Walsheim Pro";
+  color: #444;
+  margin-left: 20px;
+  margin-top: 6px;
+  font-weight: 700;
+}
+.button {
+  background-color: #b68b3c;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.button:hover {
+  background-color: #9f762f;
+}
+
+.icon {
+  width: 19px;
+  height: 15px;
+  fill: #b68b3c;
+}
+
+@media (max-width: 900px) {
+  .journey-fields {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 30px;
+  }
+
+  .find-btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+.journey-fields {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  .journey-fields {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .find-btn {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
