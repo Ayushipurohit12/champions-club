@@ -1,6 +1,6 @@
 .journey-wrapper {
   background-color: #e1d3ce;
-  padding: 120px 20px;
+  padding: clamp(40px, 10vw, 120px) clamp(16px, 4vw, 20px);
   display: flex;
   justify-content: center;
 }
@@ -11,7 +11,7 @@
   max-width: 1100px;
   background: #f2f2f2;
   border-radius: 12px;
-  padding: 40px 30px;
+  padding: clamp(24px, 4vw, 40px) clamp(16px, 3vw, 30px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 .journey-title {
@@ -51,7 +51,6 @@
 .content {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 .field p {
@@ -86,33 +85,59 @@
   fill: #b68b3c;
 }
 
-@media (max-width: 900px) {
-  .journey-fields {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 30px;
-  }
-
-  .find-btn {
-    width: 100%;
-    margin-top: 10px;
-  }
-}
-
 .journey-fields {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
 }
-@media (max-width: 768px) {
+
+@media (max-width: 900px) {
   .journey-fields {
     flex-direction: column;
     align-items: stretch;
+    gap: 24px;
   }
-  .find-btn {
+
+  .journey-card .button {
     width: 100%;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .journey-title {
+    font-size: 12px;
+    padding: 8px 20px;
+  }
+
+  .field p {
+    font-size: 16px;
+    margin-left: 0;
+  }
+
+  .field label {
+    font-size: 12px;
+  }
+
+  .journey-card .button {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .journey-fields {
+    gap: 20px;
+  }
+
+  .field {
+    min-width: 100%;
+  }
+
+  .field p {
+    font-size: 14px;
   }
 }

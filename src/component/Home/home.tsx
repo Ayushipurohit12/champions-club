@@ -8,8 +8,8 @@ function Home() {
     <div className="hero" style={{ backgroundImage: `url(${bgImage.src || bgImage})` }}>
       <div className="main-content" />
       <Navbar />
-      <div className="content">
-        <p className="welcome">WELCOME <br /> TO  <br />INDIA’S</p>
+      <div className="content" style={{display:"flex", alignItems:"center", justifyContent:"center"}}>
+        <p className="welcome">WELCOME <br /> TO  <br />INDIAS</p>
         <h1 className="title">
           MOST <br />
           EXCLUSIVE <br />

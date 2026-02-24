@@ -1,0 +1,463 @@
+.why-champions-club-container {
+  width: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: relative;
+  background-color: #e1d3ce;
+}
+
+.why-champions-club {
+  --wcc-text: #2c2c2c;
+  --wcc-heading: #1a1a1a;
+  max-width: 75rem;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: var(--wcc-text);
+  position: relative;
+}
+.why-champions-club--top-wrap {
+  position: relative;
+}
+
+.why-champions-club--top-wrap::after {
+  content: "";
+  background: linear-gradient(#fff0, #e1d2cd);
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.why-champions-club__image-section {
+  width: 100%;
+  min-height: 70vh;
+  padding: clamp(2rem, 5vw, 4rem) clamp(1.5rem, 4vw, 3rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.why-champions-club--image-wrap {
+  max-width: 75rem;
+  margin: 0 auto;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.why-champions-club__top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 4vw, 3rem);
+  align-items: start;
+  padding: clamp(2rem, 5vw, 4rem) clamp(1.5rem, 4vw, 3rem);
+  background-color: #e1d3ce82;
+}
+
+.why-champions-club__heading {
+  font-family: "GT Walsheim Pro";
+  font-size: clamp(1.75rem, 3.5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--wcc-heading);
+  margin: 0;
+}
+
+.why-champions-club__heading-club {
+  display: inline-block;
+  padding-left: 0.4em;
+}
+
+.why-champions-club__intro {
+  color: #363636;
+  max-width: 42ch;
+  margin: 0;
+  font-family: GT Walsheim Pro;
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+  font-weight: 500;
+  line-height: 1.65;
+}
+
+.why-champions-club__hero {
+  position: relative;
+  flex: 1;
+  min-height: 280px;
+  margin: 1rem 0;
+}
+
+.why-champions-club__hero-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.why-champions-club__hero-overlay .why-champions-club__card {
+  pointer-events: auto;
+}
+.why-champions-club__card {
+  position: absolute;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.why-champions-club__card-img-1 {
+  width: 146px;
+  height: 280px;
+}
+
+.why-champions-club__card-img-2 {
+  width: 200px;
+  height: 219px;
+}
+
+.why-champions-club__card-img-3 {
+  width: 200px;
+  height: 280px;
+}
+
+.why-champions-club__card-img-4 {
+  width: 140px;
+  height: 180px;
+}
+
+.why-champions-club__card--1 {
+  width: 200px;
+  height: 280px;
+  bottom: 7%;
+  left: 10%;
+}
+
+.why-champions-club__card--2 {
+  width: 180px;
+  height: 200px;
+  top: -4%;
+  right: 28%;
+}
+
+.why-champions-club__card--3 {
+  width: 200px;
+  height: 280px;
+  bottom: -24%;
+  right: 4%;
+  z-index: 1;
+}
+
+.why-champions-club__card--4 {
+  width: 131px;
+  height: 254px;
+  bottom: 0%;
+  left: 46%;
+}
+
+.why-champions-club__bottom {
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.why-champions-club__bottom::before {
+  content: "";
+  background: linear-gradient(#e1d2cd, #fff0);
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.why-champions-club--bottom-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 4vw, 3rem);
+  align-items: start;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: clamp(2rem, 5vw, 4rem) clamp(1.5rem, 4vw, 3rem);
+  background-color: #e1d3ce82;
+}
+
+.why-champions-club__heading--bottom {
+  color: var(--wcc-heading);
+  margin: 0;
+  font-family: "GT Walsheim Pro";
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.why-champions-club__bottom-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+}
+
+.why-champions-club__bottom-img-wrap {
+  width: fit-content;
+  max-width: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 3px solid #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  align-self: flex-end;
+}
+
+.why-champions-club__bottom-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.why-champions-club__carousel-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 999px;
+  width: fit-content;
+  margin: 0 auto 0.5rem;
+}
+
+.why-champions-club__carousel-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+}
+
+.why-champions-club__carousel-count {
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  min-width: 2rem;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .why-champions-club__top {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .why-champions-club--bottom-wrap {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .why-champions-club__bottom-img-wrap {
+    align-self: flex-start;
+  }
+
+  .why-champions-club__hero {
+    min-height: 220px;
+  }
+
+  .why-champions-club__card--1 {
+    width: 140px;
+    height: 200px;
+    left: 2%;
+    bottom: 18%;
+  }
+
+  .why-champions-club__card-img-1 {
+    width: 140px;
+    height: 200px;
+  }
+
+  .why-champions-club__card--2 {
+    width: 140px;
+    height: 160px;
+    right: 18%;
+    top: 15%;
+  }
+
+  .why-champions-club__card-img-2 {
+    width: 140px;
+    height: 160px;
+  }
+
+  .why-champions-club__card--3 {
+    width: 140px;
+    height: 200px;
+    right: 2%;
+    bottom: 18%;
+  }
+
+  .why-champions-club__card-img-3 {
+    width: 140px;
+    height: 200px;
+  }
+
+  .why-champions-club__card--4 {
+    width: 100px;
+    height: 180px;
+    left: 38%;
+    bottom: 5%;
+  }
+
+  .why-champions-club__heading--bottom {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-champions-club__top,
+  .why-champions-club--bottom-wrap {
+    padding: 1.5rem 1rem;
+  }
+
+  .why-champions-club__heading--bottom {
+    font-size: 26px;
+  }
+
+  .why-champions-club__intro {
+    font-size: 0.875rem;
+  }
+
+  .why-champions-club__hero {
+    min-height: 180px;
+  }
+
+  .why-champions-club__card--1 {
+    width: 110px;
+    height: 160px;
+    left: 0;
+    bottom: 20%;
+  }
+
+  .why-champions-club__card-img-1 {
+    width: 110px;
+    height: 160px;
+  }
+
+  .why-champions-club__card--2 {
+    width: 110px;
+    height: 130px;
+    right: 10%;
+    top: 10%;
+  }
+
+  .why-champions-club__card-img-2 {
+    width: 110px;
+    height: 130px;
+  }
+
+  .why-champions-club__card--3 {
+    width: 110px;
+    height: 160px;
+    right: 0;
+    bottom: 20%;
+  }
+
+  .why-champions-club__card-img-3 {
+    width: 110px;
+    height: 160px;
+  }
+
+  .why-champions-club__card--4 {
+    width: 90px;
+    height: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 2%;
+  }
+
+  .why-champions-club__card-img-4 {
+    width: 90px;
+    height: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .why-champions-club__image-section {
+    min-height: 50vh;
+    padding: 1rem;
+  }
+
+  .why-champions-club__top,
+  .why-champions-club--bottom-wrap {
+    padding: 1rem 0.75rem;
+    gap: 1rem;
+  }
+
+  .why-champions-club__heading {
+    font-size: 1.5rem;
+  }
+
+  .why-champions-club__heading--bottom {
+    font-size: 20px;
+  }
+
+  .why-champions-club__intro {
+    font-size: 0.8rem;
+    max-width: 100%;
+  }
+
+  .why-champions-club__hero {
+    min-height: 140px;
+  }
+
+  .why-champions-club__card--1 {
+    width: 85px;
+    height: 130px;
+    left: 2%;
+    bottom: 25%;
+  }
+
+  .why-champions-club__card-img-1 {
+    width: 85px;
+    height: 130px;
+  }
+
+  .why-champions-club__card--2 {
+    width: 85px;
+    height: 100px;
+    right: 5%;
+    top: 8%;
+  }
+
+  .why-champions-club__card-img-2 {
+    width: 85px;
+    height: 100px;
+  }
+
+  .why-champions-club__card--3 {
+    width: 85px;
+    height: 130px;
+    right: 2%;
+    bottom: 25%;
+  }
+
+  .why-champions-club__card-img-3 {
+    width: 85px;
+    height: 130px;
+  }
+
+  .why-champions-club__card--4 {
+    width: 70px;
+    height: 110px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+  }
+
+  .why-champions-club__card-img-4 {
+    width: 70px;
+    height: 110px;
+  }
+}

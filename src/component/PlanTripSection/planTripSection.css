@@ -1,0 +1,236 @@
+.plan-trip {
+  --plan-trip-bg: #e1d3ce;
+  --plan-trip-text: #2c2522;
+  --plan-trip-border: #c1a89a;
+  position: relative;
+  background-color: var(--plan-trip-bg);
+  overflow: hidden;
+  padding: clamp(3rem, 8vw, 6rem) clamp(1.5rem, 4vw, 3rem);
+}
+.plan-trip__bg-blur {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.plan-trip__bg-blur--tl {
+  width: min(400px, 60vw);
+  height: min(400px, 60vw);
+  top: -80px;
+  left: -80px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 248, 245, 0.9) 0%,
+    transparent 70%
+  );
+}
+
+.plan-trip__bg-blur--tr {
+  width: min(500px, 70vw);
+  height: min(500px, 70vw);
+  top: -120px;
+  right: -100px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 250, 246, 0.85) 0%,
+    transparent 65%
+  );
+}
+
+.plan-trip__bg-blur--br {
+  width: min(350px, 50vw);
+  height: min(350px, 50vw);
+  bottom: -60px;
+  right: -60px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 248, 245, 0.7) 0%,
+    transparent 70%
+  );
+}
+
+.plan-trip__inner {
+  position: relative;
+  max-width: 75rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2.5rem, 5vw, 4rem);
+  align-items: center;
+  min-height: 420px;
+}
+
+.plan-trip__media {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 380px;
+}
+
+.plan-trip__card-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 340px;
+  z-index: 1;
+}
+
+.plan-trip__card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.plan-trip__card-img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.plan-trip__shape {
+  position: absolute;
+  z-index: 1;
+}
+
+.plan-trip__shape--diamond {
+ width: 90px;
+    height: 117px;
+    top: 32%;
+    right: 5px;
+}
+
+.plan-trip__shape--triangle {
+  filter: drop-shadow(0 4px 12px #0000000f); 
+    border-top: none;
+    width: 117px;
+    height: 200vh;
+    bottom: -716px;
+    left: 27%;
+}
+.plan-trip__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  max-width: 32ch;
+}
+
+.plan-trip__text {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.15rem, 1.5vw, 1.35rem);
+  font-weight: 500;
+  line-height: 1.65;
+  color: var(--plan-trip-text);
+  margin: 0;
+}
+
+.plan-trip__cta {
+  display: inline-block;
+  width: fit-content;
+  padding: 0.85rem 1.75rem;
+  font-family: "GT Walsheim Pro", system-ui, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--plan-trip-text);
+  text-decoration: none;
+  border: 1px solid var(--plan-trip-border);
+  border-radius: 999px;
+  background: transparent;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.plan-trip__cta:hover {
+  background: rgba(193, 168, 154, 0.12);
+  border-color: #a89285;
+}
+
+.plan-trip__shape--smoke {
+  width: 20rem;
+  height: auto;
+  max-height: 50rem;
+  object-fit: contain;
+  object-position: right bottom;
+  bottom: 0;
+  right: 0;
+  top: auto;
+  left: auto;
+  pointer-events: none;
+}
+
+.plan-trip__shape--smoke-left {
+  width: 300rem;
+  height: auto;
+  max-height: 30rem;
+  object-fit: contain;
+  object-position: left bottom;
+  bottom: 0;
+  left:-15rem;
+  top: -10rem;
+  right:0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+
+
+@media (max-width: 900px) {
+  .plan-trip__inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+  }
+
+  .plan-trip__content {
+    max-width: none;
+    align-items: center;
+    text-align: center;
+  }
+
+  .plan-trip__text {
+    text-align: center;
+  }
+
+  .plan-trip__media {
+    min-height: 320px;
+  }
+
+  .plan-trip__card-wrap {
+    max-width: 280px;
+  }
+
+  .plan-trip__shape--diamond {
+    right: -10px;
+    width: 56px;
+    height: 56px;
+  }
+
+  .plan-trip__shape--triangle {
+    border-left-width: 36px;
+    border-right-width: 36px;
+    border-bottom-width: 50px;
+    left: 10%;
+  }
+}
+
+@media (max-width: 480px) {
+  .plan-trip {
+    padding: 2rem 1rem;
+  }
+
+  .plan-trip__inner {
+    min-height: auto;
+  }
+
+  .plan-trip__media {
+    min-height: 260px;
+  }
+
+  .plan-trip__card-wrap {
+    max-width: 240px;
+  }
+}

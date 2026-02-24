@@ -16,7 +16,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 200px;
+  height: clamp(80px, 15vw, 200px);
   background: linear-gradient(to bottom, #ffffff00, #e1d2cd);
 }
 .main-content {
@@ -29,7 +29,6 @@
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   text-align: center;
   width: 100%;
@@ -44,7 +43,7 @@
   font-weight: 700;
 }
 .title {
-  font-size: 180px;
+  font-size: 100px;
   line-height: 1.1;
   font-weight: 500;
 }
@@ -58,15 +57,26 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .title {
-    font-size: 48px;
+    font-size: 42px;
   }
   .welcome {
-    font-size: 16px;
+    font-size: 18px;
     letter-spacing: 2px;
   }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 32px;
+  }
+  .welcome {
+    font-size: 14px;
+    letter-spacing: 1.5px;
+  }
   .content {
-    padding: 0 20px;
+    padding: 0 16px;
+    margin-bottom: 16px;
   }
 }
