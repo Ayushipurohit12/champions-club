@@ -96,30 +96,29 @@
 }
 
 .plan-trip__shape--diamond {
- width: 90px;
-    height: 117px;
-    top: 32%;
-    right: 5px;
+  width: 90px;
+  height: 117px;
+  top: 32%;
+  right: 5px;
 }
 
 .plan-trip__shape--triangle {
-  filter: drop-shadow(0 4px 12px #0000000f); 
-    border-top: none;
-    width: 117px;
-    height: 200vh;
-    bottom: -716px;
-    left: 27%;
+  filter: drop-shadow(0 4px 12px #0000000f);
+  border-top: none;
+  width: 117px;
+  height: 200vh;
+  bottom: -716px;
+  left: 27%;
 }
 .plan-trip__content {
   display: flex;
   flex-direction: column;
   gap: 1.75rem;
-  max-width: 32ch;
 }
 
 .plan-trip__text {
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(1.15rem, 1.5vw, 1.35rem);
+  font-size: 42px;
   font-weight: 500;
   line-height: 1.65;
   color: var(--plan-trip-text);
@@ -176,7 +175,17 @@
   z-index: 0;
 }
 
-
+.plan-trip__shape-right {
+  object-fit: contain;
+  pointer-events: none;
+  z-index: 0;
+  width: 88vh;
+  max-width: none;
+  height: 162%;
+  position: absolute;
+  top: -4rem;
+  right: -24rem;
+}
 
 @media (max-width: 900px) {
   .plan-trip__inner {

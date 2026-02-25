@@ -1,0 +1,192 @@
+.customize-trip {
+  position: relative;
+  background-color: #e1d3ce;
+  padding: clamp(4rem, 9vw, 6rem) clamp(1.5rem, 6vw, 4rem);
+  overflow: hidden;
+}
+
+.customize-trip__inner {
+  max-width: 70rem;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.customize-trip__header {
+  text-align: center;
+  margin-bottom: clamp(3rem, 6vw, 4rem);
+}
+
+.customize-trip__eyebrow {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.25rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 0.25rem;
+}
+
+.customize-trip__title {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2.2rem, 3vw, 2.8rem);
+  font-weight: 500;
+  margin: 0;
+}
+
+.customize-trip__content {
+  display: flex;
+  justify-content: center;
+}
+
+.customize-trip__steps {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  row-gap: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.customize-trip__step {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 3rem;
+  align-items: center;
+}
+
+.customize-trip__step-marker {
+  position: relative;
+  width: 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.customize-trip__step-line {
+  content: "";
+  z-index: -1;
+  background-color: #bf943b;
+  width: 1px;
+  height: 64px;
+  position: absolute;
+  top: 96%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.customize-trip__step:last-child .customize-trip__step-marker::after {
+  display: none;
+}
+
+.customize-trip__step-diamond {
+  width: 5rem;
+  height: auto;
+  filter: drop-shadow(0 18px 40px rgba(0, 0, 0, 0.12));
+}
+
+.customize-trip__step-number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.4rem;
+}
+
+.customize-trip__step-copy {
+  max-width: 20rem;
+}
+
+.customize-trip__step-title {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.35rem;
+  margin: 0 0 0.4rem;
+}
+
+.customize-trip__step-text {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.customize-trip__smoke {
+  position: absolute;
+  width: 34rem;
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.customize-trip__smoke--left {
+  top: -32%;
+  left: 0rem;
+}
+
+.customize-trip__smoke--midleft {
+  top: 34%;
+  left: -10rem;
+}
+
+.customize-trip__smoke--right {
+  top: 5%;
+  right: 0rem;
+}
+
+@media (max-width: 900px) {
+  .customize-trip {
+    padding: 3rem 1.5rem;
+  }
+
+  .customize-trip__header {
+    margin-bottom: 2.5rem;
+  }
+
+  .customize-trip__step {
+    column-gap: 1.5rem;
+    align-items: flex-start;
+  }
+
+  .customize-trip__step-copy {
+    max-width: none;
+  }
+
+  .customize-trip__smoke {
+    width: 26rem;
+    opacity: 0.85;
+  }
+}
+
+@media (max-width: 600px) {
+  .customize-trip__content {
+    justify-content: flex-start;
+  }
+
+  .customize-trip__step {
+    grid-template-columns: auto 1fr;
+    column-gap: 1.25rem;
+  }
+
+   .customize-trip__step-marker {
+    width: 4rem;
+  }
+
+  .customize-trip__step-diamond {
+    width: 4rem;
+  }
+
+  .customize-trip__step-title {
+    font-size: 1.15rem;
+  }
+
+  .customize-trip__step-text {
+    font-size: 0.85rem;
+  }
+
+  .customize-trip__smoke--left {
+    left: -10rem;
+  }
+
+  .customize-trip__smoke--right {
+    right: -10rem;
+  }
+
+  .customize-trip__smoke--midleft {
+    display: none;
+  }
+}

@@ -4,7 +4,7 @@ import Image from "next/image";
 import "./planTripSection.css";
 import CardImage from "../../assets/plantrip.png";
 import Polygon from "../../assets/Polygon9_3.svg";
-import SmokeImage from "../../assets/smokefill.png";
+import SmokeImage from "../../assets/smokefill1.svg";
 import Smokefill from "../../assets/smoke1.svg";
 
 
@@ -51,8 +51,14 @@ export default function PlanTripSection() {
             HELP ME PLAN A TRIP
           </a>
         </div>
-          <Image src={Smokefill} alt="" className="plan-trip__shape-right" width={320} height={400} aria-hidden />
-
+          <Image
+            src={Smokefill}
+            alt=""
+            className="plan-trip__shape plan-trip__shape-right"
+            width={320}
+            height={400}
+            aria-hidden
+          />
       </div>
     </section>
   );
