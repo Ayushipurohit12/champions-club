@@ -1,0 +1,245 @@
+.vacation-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  padding: clamp(4rem, 10vw, 8rem) clamp(1.5rem, 5vw, 4rem) 0;
+}
+
+.vacation-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.15) 0%,
+    transparent 40%,
+    transparent 70%,
+    rgba(0, 0, 0, 0.08) 100%
+  );
+  pointer-events: none;
+}
+
+.vacation-hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 75rem;
+  margin: 0 auto;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Top-left info block */
+.vacation-hero__info {
+  align-self: flex-start;
+  max-width: 20rem;
+  margin-bottom: clamp(2rem, 6vw, 4rem);
+}
+
+.vacation-hero__badge {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #c9a227 0%, #a8841f 100%);
+  color: #fff;
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+.vacation-hero__title {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0 0 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+.vacation-hero__text {
+  font-size: clamp(0.85rem, 1.2vw, 0.95rem);
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.5;
+  margin: 0;
+}
+.vacation-hero__cta-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  margin: auto 0 clamp(2rem, 5vw, 3rem);
+}
+
+.vacation-hero__boat-icon {
+  width: 28px;
+  height: 28px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.vacation-hero__cta-line {
+  width: 1px;
+  height: 24px;
+  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.5), transparent);
+}
+
+.vacation-hero__cta {
+  padding: 0.9rem 2rem;
+  font-family: system-ui, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #8b6914 0%, #6b5010 100%);
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.vacation-hero__cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+}
+
+.vacation-hero__subscribe-wrap {
+  width: 100%;
+  max-width: 56rem;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+
+.vacation-hero__card {
+  position: relative;
+  width: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow:
+    0 32px 60px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+}
+
+.vacation-hero__card-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  min-height: 280px;
+}
+
+.vacation-hero__card-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(2rem, 5vw, 3.5rem) clamp(2.5rem, 6vw, 4rem);
+  color: #fff;
+  gap: 1.5rem;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.25) 0%,
+    rgba(0, 0, 0, 0.1) 50%,
+    rgba(0, 0, 0, 0.35) 100%
+  );
+}
+
+.vacation-hero__card-headline {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: 1.2;
+  margin: 0;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.vacation-hero__form {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: 26rem;
+}
+
+.vacation-hero__input {
+  flex: 1;
+  padding: 0.85rem 1.5rem;
+  font-size: 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  outline: none;
+  min-width: 0;
+}
+
+.vacation-hero__input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.vacation-hero__submit {
+  padding: 0.9rem 2rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.95);
+  color: #8b6914;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+}
+
+.vacation-hero__submit:hover {
+  background: #fff;
+}
+
+.vacation-hero__bottom-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: clamp(60px, 12vw, 120px);
+  background: #e1d3ce;
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .vacation-hero__info {
+    max-width: none;
+  }
+
+  .vacation-hero__card {
+    border-radius: 18px;
+  }
+
+  .vacation-hero__form {
+    max-width: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .vacation-hero {
+    padding: 3rem 1rem 0;
+  }
+
+  .vacation-hero__form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .vacation-hero__submit {
+    width: 100%;
+  }
+}

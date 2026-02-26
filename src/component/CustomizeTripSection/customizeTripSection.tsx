@@ -74,7 +74,7 @@ export default function CustomizeTripSection() {
                   aria-hidden
                 />
                 <span className="customize-trip__step-number">2</span>
-                 <div className="customize-trip__step-line" />
+                                <div className="customize-trip__step-line" />
               </div>
               <div className="customize-trip__step-copy">
                 <h3 className="customize-trip__step-title">Get matched</h3>
