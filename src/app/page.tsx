@@ -4,6 +4,7 @@ import Home from '@/component/Home/home'
 import JourneySearch from '@/component/Journey/journey'
 import LuxurySection from '@/component/luxury/luxuryPakaga'
 import PlanTripSection from '@/component/PlanTripSection/planTripSection'
+// import Reviews from '@/component/Reviews/reviews'
 import VacationHero from '@/component/VacationHero/vacationHero'
 import WhyChampionsClub from '@/component/WhyChampionsClub/whyChampionClub'
 import dynamic from 'next/dynamic'
@@ -20,9 +21,10 @@ function Page() {
       <Experiences />
       <LuxurySection />
       <WhyChampionsClub />
-       <PlanTripSection />
-       <CustomizeTripSection />
-       <VacationHero />
+      <PlanTripSection />
+      <CustomizeTripSection />
+      <VacationHero />
+      {/* <Reviews /> */}
     </div>
   )
 }

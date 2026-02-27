@@ -21,12 +21,23 @@ export default function VacationHero() {
       <div className="vacation-hero__overlay" aria-hidden />
       <div className="vacation-hero__content">
         <div className="vacation-hero__cta-wrap">
-          <Image src={SubscribeIcon} alt="icon"  />
-          {/* <div className="vacation-hero__cta-line" aria-hidden /> */}
-          <button type="button" className="vacation-hero__cta">
-            Start a trip request
-          </button>
-          <Image src={SubscribeIconbottom} alt="icon" />
+          <div className="vacation-hero__cta-frame">
+            <Image
+              src={SubscribeIcon}
+              alt=""
+              className="vacation-hero__cta-ornament vacation-hero__cta-ornament--top"
+              aria-hidden
+            />
+            <button type="button" className="vacation-hero__cta">
+              Start a trip request
+            </button>
+            <Image
+              src={SubscribeIconbottom}
+              alt=""
+              className="vacation-hero__cta-ornament vacation-hero__cta-ornament--bottom"
+              aria-hidden
+            />
+          </div>
         </div>
 
         <div className="vacation-hero__subscribe-wrap">
@@ -39,9 +50,13 @@ export default function VacationHero() {
               height={520}
             />
             <div className="vacation-hero__card-overlay">
-              <p className="vacation-hero__card-headline">
-                Get weekly inspiration and expert advice.
-              </p>
+              <p className="vacation-hero__card-headline"> 
+                Get weekly
+                <br />
+               inspiration and
+               <br />
+               expert advice 
+             </p>
               <form className="vacation-hero__form" onSubmit={(e) => e.preventDefault()}>
                 <input
                   type="email"

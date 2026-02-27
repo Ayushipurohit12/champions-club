@@ -32,7 +32,6 @@
   align-items: center;
 }
 
-/* Top-left info block */
 .vacation-hero__info {
   align-self: flex-start;
   max-width: 20rem;
@@ -62,6 +61,11 @@
   color: rgba(255, 255, 255, 0.95);
   margin: 0 0 0.5rem;
   letter-spacing: 0.02em;
+  border-top: 1px solid rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.85);
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-left: -40px;
 }
 
 .vacation-hero__text {
@@ -72,35 +76,81 @@
 }
 .vacation-hero__cta-wrap {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin: clamp(2.5rem, 8vw, 6rem) 0 clamp(2rem, 5vw, 3rem);
+}
+
+.vacation-hero__cta-frame {
+  position: relative;
+  display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
-  margin: auto 0 clamp(2rem, 5vw, 3rem);
+  justify-content: center;
+  padding: 8px;
+  border-radius: 999px;
+  border-top: 2px solid rgba(0, 0, 0, 0.7);
+  background: transparent;
 }
 
-.vacation-hero__boat-icon {
-  width: 28px;
-  height: 28px;
-  color: rgba(255, 255, 255, 0.9);
+.vacation-hero__cta-ornament {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 34px;
+  height: auto;
+  pointer-events: none;
 }
 
-.vacation-hero__cta-line {
-  width: 1px;
-  height: 24px;
-  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.5), transparent);
+.vacation-hero__cta-ornament--top {
+  top: -12px;   /* sits on border */
+}
+
+.vacation-hero__cta-ornament--bottom {
+  bottom: -12px;
+}
+
+.vacation-hero__cta {
+  padding: 0.9rem 2.8rem;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.4rem, 2.2vw, 2.2rem);
+  font-weight: 600;
+  color: #fff;
+  background: #c49a3a;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+}
+
+.vacation-hero__cta-ornament {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 34px;
+  height: auto;
+  pointer-events: none;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.15));
+}
+
+.vacation-hero__cta-ornament--top {
+  top: -18px;
+}
+
+.vacation-hero__cta-ornament--bottom {
+  bottom: -20px;
 }
 
 .vacation-hero__cta {
   padding: 0.9rem 2rem;
-  font-family: system-ui, sans-serif;
-  font-size: 0.9rem;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.4rem, 2.2vw, 2.2rem);
   font-weight: 600;
   color: #fff;
-  background: linear-gradient(135deg, #8b6914 0%, #6b5010 100%);
+  background: #c49a3a;
   border: none;
   border-radius: 999px;
   cursor: pointer;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -122,7 +172,11 @@
   width: 100%;
   border-radius: 24px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-top: 1px solid rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.85);
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-left: -40px;
   box-shadow:
     0 32px 60px rgba(0, 0, 0, 0.35),
     0 0 0 1px rgba(255, 255, 255, 0.2);
@@ -157,7 +211,7 @@
 
 .vacation-hero__card-headline {
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-size: 3rem;
   line-height: 1.2;
   margin: 0;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
@@ -220,6 +274,14 @@
     max-width: none;
   }
 
+  .vacation-hero__cta-wrap {
+    margin: 3rem 0 2.5rem;
+  }
+
+  .vacation-hero__cta-frame {
+    padding: 0.9rem 2.8rem;
+  }
+
   .vacation-hero__card {
     border-radius: 18px;
   }
@@ -232,6 +294,29 @@
 @media (max-width: 600px) {
   .vacation-hero {
     padding: 3rem 1rem 0;
+  }
+
+  .vacation-hero__cta-wrap {
+    margin: 2.5rem 0 2rem;
+  }
+
+  .vacation-hero__cta-frame {
+    padding: 0.8rem 2.2rem;
+    width: 100%;
+    max-width: 18rem;
+  }
+
+  .vacation-hero__cta {
+    font-size: 1.1rem;
+    padding: 0.7rem 1.4rem;
+  }
+
+  .vacation-hero__cta-ornament--top {
+    top: -10px;
+  }
+
+  .vacation-hero__cta-ornament--bottom {
+    bottom: -12px;
   }
 
   .vacation-hero__form {
