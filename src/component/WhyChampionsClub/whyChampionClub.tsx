@@ -32,7 +32,6 @@ export default function WhyChampionsClub() {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "center center",
-          height:"100vh",
         }}
       >
         <div className="why-champions-club why-champions-club--image-wrap">

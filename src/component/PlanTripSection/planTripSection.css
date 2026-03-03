@@ -179,12 +179,12 @@
   object-fit: contain;
   pointer-events: none;
   z-index: 0;
-  width: 88vh;
-  max-width: none;
-  height: 162%;
+  width: 60vw;
+  max-width: 520px;
+  height: auto;
   position: absolute;
-  top: -4rem;
-  right: -24rem;
+  top: -2rem;
+  right: -8rem;
 }
 
 @media (max-width: 900px) {
@@ -219,10 +219,12 @@
   }
 
   .plan-trip__shape--triangle {
-    border-left-width: 36px;
-    border-right-width: 36px;
-    border-bottom-width: 50px;
-    left: 10%;
+    display: none;
+  }
+
+  .plan-trip__shape-right,
+  .plan-trip__shape--smoke-left {
+    display: none;
   }
 }
 

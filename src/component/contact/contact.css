@@ -1,0 +1,115 @@
+.contact-section {
+  min-height: 100vh;
+  padding: 50px 0;
+  background-color: #e1d3ce;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.contact-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(225, 211, 206, 0) 40%, #e1d3ce 100%);
+}
+
+.contact-card {
+  position: relative;
+  top: 25rem;
+  padding: 40px 35px;
+  border-radius: 24px;
+  backdrop-filter: blur(18px);
+  background: rgba(255, 255, 255, 0.15);
+  text-align: center;
+  box-sizing: border-box;
+  width: 30%;
+  max-width: 420px;
+}
+.contact-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 92%;
+  left: 4%;
+  border-radius: 24px;
+  border: 1.5px solid rgba(255, 255, 255, 0.7);
+}
+
+.contact-card::after {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+.contact-card h2 {
+  margin-bottom: 25px;
+  font-size: 26px;
+  color: #2b2b2b;
+  font-weight: 500;
+}
+.contact-card input {
+  display: block;
+  margin: 0 auto 15px auto;
+  padding: 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.25);
+  outline: none;
+  text-align: center;
+  font-size: 14px;
+}
+
+.contact-card button {
+  margin-top: 10px;
+  padding: 10px 30px;
+  border-radius: 25px;
+  border: none;
+  background: #c8a046;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border-top: 2px solid #000000b3;
+  border-radius: 999px;
+}
+
+.contact-card button:hover {
+  background: #b48d35;
+  transform: scale(1.05);
+}
+
+@media (max-width: 900px) {
+  .contact-card {
+    width: 60%;
+    padding: 32px 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-section {
+    padding: 40px 0;
+  }
+
+  .contact-card {
+    width: 90%;
+    padding: 28px 20px;
+  }
+
+  .contact-card h2 {
+    font-size: 22px;
+  }
+
+  .contact-card input {
+    font-size: 13px;
+  }
+
+  .contact-card button {
+    width: 100%;
+  }
+}
