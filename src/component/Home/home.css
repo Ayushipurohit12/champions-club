@@ -10,6 +10,51 @@
   align-items: center;
 }
 
+.hero-polygons {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-polygon {
+  position: absolute;
+  width: 120px;
+  height: 160px;
+  background-image: url("../../assets/Polygon4.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.7;
+}
+
+.hero-polygon--left {
+  top: 30%;
+  left: 23%;
+  transform: translateY(-50%);
+  width: 15vh;
+  height: 5rem;
+}
+
+.hero-polygon--left-bttom {
+  top: 65%;
+  left: 8%;
+  transform: translateY(-50%);
+ 
+}
+
+.hero-polygon--center {
+  top: 65%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-polygon--right {
+  top: 53%;
+  right: 12%;
+  transform: translateY(-50%);
+ 
+}
+
 .hero::after {
   content: "";
   position: absolute;

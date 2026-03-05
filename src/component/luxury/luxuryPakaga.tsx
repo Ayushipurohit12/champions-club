@@ -41,7 +41,6 @@ function LuxurySection() {
              top: "12rem",
         }}>
         <div className="luxury-header-text">
-           <p className="luxury-label">Luxury</p>
               <h2>
                 Luxury
                 <br />

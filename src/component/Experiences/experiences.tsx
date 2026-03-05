@@ -9,10 +9,21 @@ import Yachts from "../../assets/yachts.png";
 import Villas from "../../assets/village.png";
 import arrow from "../../assets/arrow.svg";
 
+const experienceData = [
+  { id: 1, image: CharterPlanes, alt: "Charter Planes", title: "Charter Planes" },
+  { id: 2, image: Helicopters, alt: "Helicopters", title: "Helicopters" },
+  { id: 3, image: Yachts, alt: "Yachts", title: "Yachts" },
+  { id: 4, image: Villas, alt: "Villas", title: "Villas" },
+  { id: 5, image: CharterPlanes, alt: "Charter Planes", title: "Charter Planes" },
+  { id: 6, image: Helicopters, alt: "Helicopters", title: "Helicopters" },
+  { id: 7, image: Yachts, alt: "Yachts", title: "Yachts" },
+  { id: 8, image: Villas, alt: "Villas", title: "Villas" },
+];
+
 export default function Experiences() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  const handleScroll = () => {
+  const handleScroll = (direction: "prev" | "next") => {
     const container = scrollRef.current;
     if (!container) return;
 
@@ -27,7 +38,10 @@ export default function Experiences() {
 
     const step = firstCard.offsetWidth + gap;
 
-    container.scrollBy({ left: step, behavior: "smooth" });
+    container.scrollBy({
+      left: direction === "next" ? step : -step,
+      behavior: "smooth",
+    });
   };
 
   return (
@@ -40,43 +54,45 @@ export default function Experiences() {
           Top Related <br /> Experiences
         </h2>
       </div>
-      <div
-        className="cards-wrapper"
-        ref={scrollRef}
-        style={{
-          display: "flex",
-          overflowX: "auto",
-          scrollbarWidth: "none",
-          msOverflowStyle: "none",
-          scrollBehavior: "smooth",
-        }}
-      >
-        <div className="card">
-          <Image src={CharterPlanes} alt="Charter Planes" />
-          <div className="overlay">
-            <h3>Charter Planes</h3>
-          </div>
+      <div className="experience-carousel-wrapper" style={{ position: 'relative' }}>
+        <div
+          className="cards-wrapper"
+          ref={scrollRef}
+          style={{
+            display: "flex",
+            overflowX: "auto",
+            scrollbarWidth: "none",
+            msOverflowStyle: "none",
+            scrollBehavior: "smooth",
+            gap: "2rem",
+          }}
+        >
+          {experienceData.map((exp) => (
+            <div className="card" key={exp.id}>
+              <Image src={exp.image} alt={exp.alt} />
+              <div className="overlay">
+                <h3>{exp.title}</h3>
+              </div>
+            </div>
+          ))}
         </div>
-        <div className="card">
-          <Image src={Helicopters} alt="Helicopters" />
-          <div className="overlay">
-            <h3>Helicopters</h3>
-          </div>
-        </div>
-        <div className="card">
-          <Image src={Yachts} alt="Yachts" />
-          <div className="overlay">
-            <h3>Yachts</h3>
-          </div>
-        </div>
-        <div className="card">
-          <Image src={Villas} alt="Villas" />
-          <div className="overlay">
-            <h3>Villas</h3>
-          </div>
-        </div>
-        <button className="arrow" onClick={handleScroll} aria-label="Next experiences">
-          <Image src={arrow} alt="Next" width={24} height={24} className="arrow-image" />
+        <button className="arrow prev-arrow" onClick={() => handleScroll("prev")} aria-label="Previous experiences" style={{ position: 'absolute', top: '50%', left: '20rem;', transform: 'translateY(-50%) rotate(180deg)', zIndex: 2 }}>
+          <Image
+            src={arrow}
+            alt="Previous"
+            width={24}
+            height={24}
+            className="arrow-image"
+          />
+        </button>
+        <button className="arrow next-arrow" onClick={() => handleScroll("next")} aria-label="Next experiences" style={{ position: 'absolute', top: '50%', right: '20rem', transform: 'translateY(-50%)', zIndex: 2 }}>
+          <Image
+            src={arrow}
+            alt="Next"
+            width={24}
+            height={24}
+            className="arrow-image"
+          />
         </button>
       </div>
     </section>

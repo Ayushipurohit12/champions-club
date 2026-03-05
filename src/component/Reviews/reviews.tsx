@@ -21,23 +21,63 @@ const testimonials = [
     role: "UI/UX Designer",
     text: `\"Lorem Ipsum dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s It was popular in the 1960s with the release of Letraset sheets containing Lorem Ipsum.\"`,
   },
+   {
+    id: 3,
+    name: "Eduard Hand",
+    role: "UI/UX Designer",
+    text: `\"Lorem Ipsum dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s It was popular in the 1960s with the release of Letraset sheets containing Lorem Ipsum.\"`,
+  },
+   {
+    id: 4,
+    name: "Eduard Hand",
+    role: "UI/UX Designer",
+    text: `\"Lorem Ipsum dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s It was popular in the 1960s with the release of Letraset sheets containing Lorem Ipsum.\"`,
+  },
+  {
+    id: 5,
+    name: "Eduard Hand",
+    role: "UI/UX Designer",
+    text: `\"Lorem Ipsum dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s It was popular in the 1960s with the release of Letraset sheets containing Lorem Ipsum.\"`,
+  },
+  {
+    id: 6,
+    name: "Eduard Hand",
+    role: "UI/UX Designer",
+    text: `\"Lorem Ipsum dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s It was popular in the 1960s with the release of Letraset sheets containing Lorem Ipsum.\"`,
+  },
+  {
+    id: 7,
+    name: "Eduard Hand",
+    role: "UI/UX Designer",
+    text: `\"Lorem Ipsum dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s It was popular in the 1960s with the release of Letraset sheets containing Lorem Ipsum.\"`,
+  },
+ {
+    id: 8,
+    name: "Eduard Hand",
+    role: "UI/UX Designer",
+    text: `\"Lorem Ipsum dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s It was popular in the 1960s with the release of Letraset sheets containing Lorem Ipsum.\"`,
+  },
 ];
 
 export default function Reviews() {
   const cardsRef = useRef<HTMLDivElement>(null);
 
-  const handleNext = () => {
+  const handleScroll = (direction: "prev" | "next") => {
     if (!cardsRef.current) return;
     const card = cardsRef.current.querySelector(
       ".reviews__card"
     ) as HTMLElement;
-    const gap = 48;
+    if (!card) return;
+
+    const styles = window.getComputedStyle(cardsRef.current);
+    const gap = parseFloat(styles.columnGap) || 48;
+    const scrollAmount = card.offsetWidth + gap;
+
     cardsRef.current.scrollBy({
-      left: card.offsetWidth + gap,
+      left: direction === "next" ? scrollAmount : -scrollAmount,
       behavior: "smooth",
     });
   };
-
   return (
     <section className="reviews">
       <div className="reviews__inner">
@@ -59,7 +99,7 @@ export default function Reviews() {
             {testimonials.map((item) => (
               <article key={item.id} className="reviews__card">
                 <div className="reviews__card-frame">
-                  <div className="reviews__card-crown">
+                  <div className="reviews__card-crown" style={{ zIndex: 1 }}>
                     <Image src={icon} alt="" width={50} height={40} />
                   </div>
 
@@ -84,11 +124,11 @@ export default function Reviews() {
             ))}
           </div>
           <button
-            className="reviews__next"
-            onClick={handleNext}
+            className="reviews__nav reviews__next"
+            onClick={() => handleScroll("next")}
             aria-label="Next review"
           >
-            <Image src={ArrowIcon} alt="" width={20} height={20}  className="reviews__next-icon" />
+            <Image src={ArrowIcon} alt="Next" width={20} height={20}  className="reviews__nav-icon" />
           </button>
         </div>
       </div>

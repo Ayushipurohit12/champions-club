@@ -6,6 +6,12 @@ import "./home.css";
 function Home() {
   return (
     <div className="hero" style={{ backgroundImage: `url(${bgImage.src || bgImage})` }}>
+      <div className="hero-polygons" aria-hidden>
+        <div className="hero-polygon hero-polygon--left" />
+        <div className="hero-polygon hero-polygon--left-bttom" />
+        <div className="hero-polygon hero-polygon--center" />
+        <div className="hero-polygon hero-polygon--right" />
+      </div>
       <div className="main-content" />
       <Navbar />
       <div className="content" style={{display:"flex", alignItems:"center", justifyContent:"center"}}>
