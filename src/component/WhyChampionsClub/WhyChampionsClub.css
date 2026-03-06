@@ -61,6 +61,7 @@
   align-items: start;
   padding: clamp(2rem, 5vw, 4rem) clamp(1.5rem, 4vw, 3rem);
   background-color: #e1d3ce82;
+  z-index: 2;
 }
 
 .why-champions-club__heading {
@@ -82,7 +83,7 @@
   max-width: 42ch;
   margin: 0;
   font-family: GT Walsheim Pro;
-  font-size: clamp(0.9rem, 1.2vw, 1rem);
+  font-size: 20px;
   font-weight: 500;
   line-height: 1.65;
 }
