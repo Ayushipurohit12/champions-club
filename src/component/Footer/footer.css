@@ -1,14 +1,15 @@
-.hero-wrapper {
+.bg-wrapper {
   position: relative;
+  top: 4%;
   width: 100%;
-  min-height: 100vh;
+  min-height: 130vh; 
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  margin-top: 20vh;
+  margin-top: 10vh;
 }
-.hero-background {
+.bg-background {
   object-fit: cover;
   z-index: 1;
 }
@@ -20,14 +21,13 @@
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
   z-index: 2;
 }
-
-
-.hero-person {
+.bg-person {
   position: absolute;
-  bottom: 200px;
+  bottom: 100px;
   left: 50%;
+  top: 5%;
   transform: translateX(-50%);
-  height: 65%;
+  height: 70%;
   z-index: 3;
 }
 
@@ -101,13 +101,13 @@
 }
 
 @media (max-width: 900px) {
-  .hero-wrapper {
-    margin-top: 14vh;
+  .bg-wrapper {
+    margin-top: 0;
   }
 
-  .hero-person {
+  .bg-person {
     height: 60%;
-    bottom: 140px;
+    top:20%
   }
 
   .footer {
@@ -134,16 +134,19 @@
 }
 
 @media (max-width: 600px) {
-  .hero-wrapper {
-    margin-top: 10vh;
+  .bg-wrapper {
+    margin-top: 0;
   }
 
-  .hero-person {
-    height: 50%;
-    bottom: 180px;
+  .bg-person {
+    bottom: auto;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 380px;
+    height: auto;
   }
-
-  .footer {
+  .footer-top {
     flex-direction: column;
     align-items: flex-start;
     padding: 32px 20px;

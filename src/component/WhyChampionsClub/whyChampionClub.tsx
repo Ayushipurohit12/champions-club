@@ -10,7 +10,7 @@ import Polygon from "../../assets/Polygon9_3.svg";
 
 export default function WhyChampionsClub() {
   return (
-    <section className="why-champions-club-container">
+    <section className="why-champions-club-container" id="lifestyle">
       <div className="why-champions-club why-champions-club--top-wrap" style={{ backgroundImage: `linear-gradient(to bottom, #e1d3ce 0%, #e5d1c7 40%, rgba(229, 209, 199, 0.6) 60%, #e1d3ce 100%)` }}>
         <div className="why-champions-club__top">
           <h2 className="why-champions-club__heading">

@@ -14,15 +14,15 @@ import Twitter from "../../assets/tewitter.svg";
 import Youtube from "../../assets/youtube.svg";
 function FooterHero() {
   return (
-    <section className="hero-wrapper">
+    <section className="bg-wrapper">
       <Image
         src={bgImage}
         alt="footer background"
         fill
-        className="hero-background"
+        className="bg-background"
       />
       <div className="top-fade" />
-      <Image src={personImage} alt="person" className="hero-person" />
+      <Image src={personImage} alt="person" className="bg-person" />
       <footer className="footer">
         <div className="footer-top">
         <div className="footer-left">

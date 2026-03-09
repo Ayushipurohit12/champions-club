@@ -19,3 +19,7 @@ body {
   margin: 0;
   font-family: "Cormorant Garamond";
 }
+
+html {
+  scroll-behavior: smooth;
+}

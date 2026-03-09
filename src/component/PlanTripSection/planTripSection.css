@@ -230,18 +230,40 @@
 
 @media (max-width: 480px) {
   .plan-trip {
-    padding: 2rem 1rem;
+    padding: 0;
   }
 
   .plan-trip__inner {
-    min-height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 1rem 2rem;
   }
 
   .plan-trip__media {
-    min-height: 260px;
+    min-height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   .plan-trip__card-wrap {
-    max-width: 240px;
+    max-width: 420px;
+    width: 100%;
+  }
+
+  .plan-trip__card {
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .plan-trip__card-img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .plan-trip__content {
+    display: none;
   }
 }

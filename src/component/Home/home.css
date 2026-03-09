@@ -110,6 +110,9 @@
     font-size: 18px;
     letter-spacing: 2px;
   }
+  .hero-polygons {
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
@@ -124,4 +127,25 @@
     padding: 0 16px;
     margin-bottom: 16px;
   }
+}
+
+.page-section {
+  padding: 80px 24px;
+  background-color: #e1d2cd;
+  color: #000;
+}
+
+.page-section:nth-of-type(even) {
+  background-color: #f4ebe7;
+}
+
+.page-section h2 {
+  margin-bottom: 16px;
+  font-size: 32px;
+}
+
+.page-section p {
+  max-width: 800px;
+  margin: 0;
+  line-height: 1.6;
 }

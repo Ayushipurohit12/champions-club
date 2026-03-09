@@ -6,7 +6,7 @@ import  SubscribeIconbottom from "../../assets/subscribeicon1.svg"
 import Image from "next/image";
 function Contact() {
   return (
-    <section className="contact-section">
+    <section className="contact-section" id="about">
       <Image src={bgImage} alt="Background" fill style={{ objectFit: "cover" }} className="background-image" />
       <div className="contact-overlay">
         <div className="contact-card">

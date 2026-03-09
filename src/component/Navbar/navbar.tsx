@@ -13,10 +13,18 @@ function Navbar() {
         <Image src={logo} alt="Champions Club Logo" width={120} height={40} />
       </div>
       <nav className={`nav-links ${isMenuOpen ? "open" : ""}`}>
-        <Link href="/about">ABOUT US</Link>
-        <Link href="/services">SERVICES</Link>
-        <Link href="/lifestyle">LIFESTYLE ASSISTANCE</Link>
-        <Link href="/journey">BOOKING</Link>
+        <Link href="#about" onClick={() => setIsMenuOpen(false)}>
+          ABOUT US
+        </Link>
+        <Link href="#services" onClick={() => setIsMenuOpen(false)}>
+          SERVICES
+        </Link>
+        <Link href="#lifestyle" onClick={() => setIsMenuOpen(false)}>
+          LIFESTYLE ASSISTANCE
+        </Link>
+        <Link href="#booking" onClick={() => setIsMenuOpen(false)}>
+          BOOKING
+        </Link>
       </nav>
       <div className="nav-actions">
         <button className="explore">EXPLORE NOW</button>

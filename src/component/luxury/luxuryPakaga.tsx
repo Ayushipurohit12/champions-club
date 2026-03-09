@@ -20,6 +20,7 @@ function LuxurySection() {
   return (
     <section
       className="luxury-section"
+      id="booking" 
       style={{
         backgroundImage: `linear-gradient(to bottom, #e1d3ce 0%, #e5d1c7 40%, rgba(229, 209, 199, 0.6) 60%, #e1d3ce 100%), url(${
           BackgroundImage.src || BackgroundImage
