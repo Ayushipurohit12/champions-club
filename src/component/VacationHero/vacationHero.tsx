@@ -11,13 +11,14 @@ export default function VacationHero() {
   return (
     <section
       className="vacation-hero"
-      style={{
-        backgroundImage: `url(${HeroBg.src || HeroBg})`,
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
     >
+      <Image
+        src={HeroBg}
+        alt="Background"
+        fill
+        style={{ objectFit: "cover" }}
+        priority
+      />
       <div className="vacation-hero__overlay" aria-hidden />
       <div className="vacation-hero__content">
         <div className="vacation-hero__cta-wrap">
