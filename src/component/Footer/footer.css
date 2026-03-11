@@ -2,7 +2,7 @@
   position: relative;
   top: 4%;
   width: 100%;
-  min-height: 130vh; 
+  min-height: 130vh;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -54,11 +54,11 @@
   gap: 40px;
 }
 .footer-top {
-   display: flex;
+  display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
- padding: 60px 80px;
+  padding: 60px 80px;
 }
 .email-box {
   border-bottom: 1px solid #ffff;
@@ -139,12 +139,13 @@
   }
 
   .bg-person {
-    bottom: auto;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 90%;
-    max-width: 380px;
+    max-width: 170px;
     height: auto;
+    top: auto;
+    bottom: 504px;
+    left: 50%;
+    transform: translateX(-50%);
   }
   .footer-top {
     flex-direction: column;
